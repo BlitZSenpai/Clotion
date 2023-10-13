@@ -5,9 +5,10 @@ import { Logo } from "./logo";
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "@/components/mode-toggle";
 import { useConvexAuth } from "convex/react";
-import { SignInButton, SignUpButton } from "@clerk/clerk-react";
+import { SignInButton, SignUpButton, UserButton } from "@clerk/clerk-react";
 import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/spinner";
+import Link from "next/link";
 
 export const NavBar = () => {
 	const { isAuthenticated, isLoading } = useConvexAuth();
@@ -32,6 +33,14 @@ export const NavBar = () => {
 						<SignUpButton mode="modal">
 							<Button size="sm">Get Clotion Free</Button>
 						</SignUpButton>
+					</>
+				)}
+				{isAuthenticated && !isLoading && (
+					<>
+						<Button variant="ghost" size="sm">
+							<Link href="/documents">Enter Clotion</Link>
+						</Button>
+						<UserButton afterSignOutUrl="/" />
 					</>
 				)}
 				<ModeToggle />
