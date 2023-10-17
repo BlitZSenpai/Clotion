@@ -31,7 +31,7 @@ export const ConfirmModal = ({ children, onConfirm }: ConfirmModalProps) => {
 			</AlertDialogTrigger>
 			<AlertDialogContent>
 				<AlertDialogHeader>
-					<AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+					<AlertDialogTitle>Are you sure?</AlertDialogTitle>
 					<AlertDialogDescription>
 						This action cannot be undone.
 					</AlertDialogDescription>
@@ -40,7 +40,7 @@ export const ConfirmModal = ({ children, onConfirm }: ConfirmModalProps) => {
 					<AlertDialogCancel onClick={(e) => e.stopPropagation()}>
 						Cancel
 					</AlertDialogCancel>
-					<AlertDialogAction onClick={handleConfirm}>Cancel</AlertDialogAction>
+					<AlertDialogAction onClick={handleConfirm}>Confirm</AlertDialogAction>
 				</AlertDialogFooter>
 			</AlertDialogContent>
 		</AlertDialog>
