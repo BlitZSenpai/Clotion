@@ -14,7 +14,7 @@ export const archive = mutation({
 		const existingDocument = await ctx.db.get(args.id);
 
 		if (!existingDocument) throw new Error("Not found");
-		if (existingDocument.userId === userId) throw new Error("Unauthorized");
+		if (existingDocument.userId !== userId) throw new Error("Unauthorized");
 
 		const recursiveArchive = async (documentId: Id<"documents">) => {
 			const children = await ctx.db
@@ -23,6 +23,7 @@ export const archive = mutation({
 					q.eq("userId", userId).eq("parentDocument", documentId)
 				)
 				.collect();
+
 			for (const child of children) {
 				await ctx.db.patch(child._id, {
 					isArchived: true,
