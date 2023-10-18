@@ -194,7 +194,7 @@ export const getSearch = query({
 	},
 });
 
-export const getById = query({
+export const getDocumentById = query({
 	args: { documentId: v.id("documents") },
 	handler: async (ctx, args) => {
 		const identity = await ctx.auth.getUserIdentity();
