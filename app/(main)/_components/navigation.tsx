@@ -18,6 +18,7 @@ import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { Item } from "./item";
 import { toast } from "sonner";
+import { useSearch } from "@/hooks/use-search";
 import { DocumentList } from "./document-list";
 import {
 	Popover,
@@ -27,6 +28,7 @@ import {
 import { TrashCan } from "./trash-can";
 
 const Navigation = () => {
+	const search = useSearch();
 	const pathname = usePathname();
 	const isMobile = useMediaQuery("(max-width: 768px)");
 	const create = useMutation(api.documents.create);
@@ -144,7 +146,7 @@ const Navigation = () => {
 				</div>
 				<div>
 					<UserItem />
-					<Item label="Search" icon={Search} isSearch onClick={() => {}} />
+					<Item label="Search" icon={Search} isSearch onClick={search.onOpen} />
 					<Item label="Settings" icon={Settings} onClick={() => {}} />
 					<Item onClick={handleCreate} label="New page" icon={PlusCircle} />
 				</div>
