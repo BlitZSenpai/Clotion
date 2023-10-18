@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/spinner";
 import Link from "next/link";
 
-export const NavBar = () => {
+export const MarketingNavBar = () => {
 	const { isAuthenticated, isLoading } = useConvexAuth();
 	const scrolled = useScrollTop();
 	return (
