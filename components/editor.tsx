@@ -22,6 +22,7 @@ export const Editor = ({ onChange, initialContent, editable }: EditorProps) => {
 			onChange(JSON.stringify(editor.topLevelBlocks, null, 2));
 		},
 	});
+
 	return (
 		<div>
 			<BlockNoteView
