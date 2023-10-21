@@ -31,14 +31,14 @@ export const MarketingNavBar = () => {
 							</Button>
 						</SignInButton>
 						<SignUpButton mode="modal">
-							<Button size="sm">Get Clotion Free</Button>
+							<Button size="sm">Get Crux Free</Button>
 						</SignUpButton>
 					</>
 				)}
 				{isAuthenticated && !isLoading && (
 					<>
 						<Button variant="ghost" size="sm" asChild>
-							<Link href="/documents">Enter Clotion</Link>
+							<Link href="/documents">Enter Crux</Link>
 						</Button>
 						<UserButton afterSignOutUrl="/" />
 					</>

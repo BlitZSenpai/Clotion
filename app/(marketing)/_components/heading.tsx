@@ -13,10 +13,10 @@ export const Heading = () => {
 		<div className="max-w-3xl space-y-4">
 			<h1 className="text-3xl sm:text-5xl md:text-6xl font-bold">
 				Your Ideas, Documents & <br /> Plans. Unified. Welcome <br /> to{" "}
-				<span className="underline">Clotion</span>
+				<span className="underline">Crux</span>
 			</h1>
 			<h3 className="text-base sm:text-xl md:text-2xl font-medium">
-				Clotion is the connected workspace where <br />
+				Crux is the connected workspace where <br />
 				better, faster work happens.
 			</h3>
 			{isLoading && (
@@ -27,7 +27,7 @@ export const Heading = () => {
 			{!isAuthenticated && !isLoading && (
 				<SignUpButton mode="modal">
 					<Button size="sm">
-						Get Clotion Free
+						Get Crux Free
 						<ArrowRight className="h-4 w-4 ml-2" />
 					</Button>
 				</SignUpButton>
@@ -35,7 +35,7 @@ export const Heading = () => {
 			{isAuthenticated && !isLoading && (
 				<Button asChild>
 					<Link href="/documents">
-						Enter Clotion
+						Enter Crux
 						<ArrowRight className="h-4 w-4 ml-2" />
 					</Link>
 				</Button>

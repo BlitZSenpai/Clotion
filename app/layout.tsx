@@ -10,7 +10,7 @@ import { EdgeStoreProvider } from "@/lib/edgestore";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Clotion",
+	title: "Crux",
 	description: "Literally a Notion clone",
 	icons: {
 		icon: [
@@ -43,7 +43,7 @@ export default function RootLayout({
 							defaultTheme="system"
 							enableSystem
 							disableTransitionOnChange
-							storageKey="clotion-theme"
+							storageKey="crux-theme"
 						>
 							<Toaster position="bottom-center" />
 							<ModalProvider />
