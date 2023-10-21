@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Crux - A Full-Featured Note-Taking Web App
+
+Crux is a full-stack web application developed using Shadcn UI, Next.js, Convex Database, Clerk Authentication, TypeScript, React, Edge Store for image upload, Zustand for state management, and the Blocknote text editor. This project offers a range of features for creating, organizing, and sharing notes and pages without referencing any specific application like Notion.
+
+---
+
+## Table of Contents
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+
+---
+
+## Features
+
+- **Rich Text Editing**: Utilizes the Blocknote text editor to create and format text content with ease.
+
+- **Image Upload**: Allows users to add images to their notes and pages using Edge Store.
+
+- **Authentication**: Users can log in and access their notes securely using Clerk Authentication.
+
+- **Data Storage**: Persists data efficiently with Convex Database.
+
+- **State Management**: Utilizes Zustand for effective state management, ensuring a smooth user experience.
+
+- **Note/Page Management**: Users can create, edit, delete, and archive notes and pages.
+
+- **Publishing**: Notes and pages can be published publicly, with a unique link for easy sharing. Published content is view-only, ensuring that viewers cannot edit the content.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Before you begin, ensure you have met the following requirements:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js and npm installed on your local machine.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone the repository:
 
-## Learn More
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Change to the project's directory:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   cd your-repo
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. Install the dependencies:
 
-## Deploy on Vercel
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Configure your environment variables (e.g., Clerk API keys) as needed.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+6. Open your web browser and navigate to `http://localhost:3000` to access the application.
+
+---
+
+## Usage
+
+- To create a new note or page, click the "New" button.
+
+- Edit content using the Blocknote editor. You can add text and images.
+
+- Use the archive option to hide notes or pages from the main view.
+
+- To permanently delete a note or page, use the delete option.
+
+- To publish a note or page, click "Publish" and share the generated link.
+
+---
+
+## Technologies Used
+
+- Shadcn UI
+- Next.js
+- Convex Database
+- Clerk Authentication
+- TypeScript
+- React
+- Edge Store
+- Zustand
+
+---
+
+## Contributing
+
+Contributions are welcome! Please feel free to open an issue or submit a pull request.
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
