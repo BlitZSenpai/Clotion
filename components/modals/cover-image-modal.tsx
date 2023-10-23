@@ -11,52 +11,52 @@ import { Id } from "@/convex/_generated/dataModel";
 import { SingleImageDropzone } from "../single-image-dropzone";
 
 export const CoverImageModal = () => {
-	const params = useParams();
-	const [file, setFile] = useState<File>();
-	const [isSubmitting, setIsSubmitting] = useState(false);
-	const coverImage = useCoverImage();
-	const { edgestore } = useEdgeStore();
-	const updateImage = useMutation(api.documents.updateDocument);
+  const params = useParams();
+  const [file, setFile] = useState<File>();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const coverImage = useCoverImage();
+  const { edgestore } = useEdgeStore();
+  const updateImage = useMutation(api.documents.updateDocument);
 
-	const onClose = () => {
-		setFile(undefined);
-		setIsSubmitting(false);
-		coverImage.onClose();
-	};
+  const onClose = () => {
+    setFile(undefined);
+    setIsSubmitting(false);
+    coverImage.onClose();
+  };
 
-	const onChange = async (file?: File) => {
-		if (file) {
-			setIsSubmitting(true);
-			setFile(file);
+  const onChange = async (file?: File) => {
+    if (file) {
+      setIsSubmitting(true);
+      setFile(file);
 
-			const res = await edgestore.publicFiles.upload({
-				file,
-				options: {
-					replaceTargetUrl: coverImage.url,
-				},
-			});
+      const res = await edgestore.publicFiles.upload({
+        file,
+        options: {
+          replaceTargetUrl: coverImage.url,
+        },
+      });
 
-			await updateImage({
-				id: params.documentId as Id<"documents">,
-				coverImage: res.url,
-			});
-			onClose();
-		}
-	};
+      await updateImage({
+        id: params.documentId as Id<"documents">,
+        coverImage: res.url,
+      });
+      onClose();
+    }
+  };
 
-	return (
-		<Dialog open={coverImage.isOpen} onOpenChange={coverImage.onClose}>
-			<DialogContent>
-				<DialogHeader>
-					<h2 className="text-center text-lg font-semibold">Cover Image</h2>
-				</DialogHeader>
-				<SingleImageDropzone
-					className="w-full outline-none"
-					disabled={isSubmitting}
-					value={file}
-					onChange={onChange}
-				/>
-			</DialogContent>
-		</Dialog>
-	);
+  return (
+    <Dialog open={coverImage.isOpen} onOpenChange={coverImage.onClose}>
+      <DialogContent>
+        <DialogHeader>
+          <h2 className="text-center text-lg font-semibold">Cover Image</h2>
+        </DialogHeader>
+        <SingleImageDropzone
+          className="w-full outline-none"
+          disabled={isSubmitting}
+          value={file}
+          onChange={onChange}
+        />
+      </DialogContent>
+    </Dialog>
+  );
 };
