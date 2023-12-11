@@ -49,13 +49,13 @@ Before you begin, ensure you have met the following requirements:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/BlitZSenpai/Crux
    ```
 
 2. Change to the project's directory:
 
    ```bash
-   cd your-repo
+   cd Crux
    ```
 
 3. Install the dependencies:
