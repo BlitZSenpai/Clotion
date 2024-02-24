@@ -55,7 +55,7 @@ Before you begin, ensure you have met the following requirements:
 2. Change to the project's directory:
 
    ```bash
-   cd Crux
+   cd crux
    ```
 
 3. Install the dependencies:
