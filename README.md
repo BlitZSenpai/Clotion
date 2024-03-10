@@ -6,15 +6,15 @@ Crux is a full-stack web application developed using Shadcn UI, Next.js, Convex 
 
 ## Table of Contents
 
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+- [Crux - A Full-Featured Note-Taking Web App](#crux---a-full-featured-note-taking-web-app)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [Technologies Used](#technologies-used)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ---
 
@@ -73,20 +73,6 @@ Before you begin, ensure you have met the following requirements:
    ```
 
 6. Open your web browser and navigate to `http://localhost:3000` to access the application.
-
----
-
-## Usage
-
-- To create a new note or page, click the "New" button.
-
-- Edit content using the Blocknote editor. You can add text and images.
-
-- Use the archive option to hide notes or pages from the main view.
-
-- To permanently delete a note or page, use the delete option.
-
-- To publish a note or page, click "Publish" and share the generated link.
 
 ---
 
