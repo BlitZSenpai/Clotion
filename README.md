@@ -42,14 +42,14 @@ Crux is a full-stack web application developed using Shadcn UI, Next.js, Convex 
 
 Before you begin, ensure you have met the following requirements:
 
-- Node.js and npm installed on your local machine.
+- Node.js and pnpm installed on your local machine.
 
 ### Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/BlitZSenpai/Crux
+   git clone https://github.com/koushikyemula/Crux
    ```
 
 2. Change to the project's directory:
@@ -61,7 +61,7 @@ Before you begin, ensure you have met the following requirements:
 3. Install the dependencies:
 
    ```bash
-   npm install
+   pnpm install
    ```
 
 4. Configure your environment variables (e.g., Clerk API keys) as needed.
@@ -69,7 +69,7 @@ Before you begin, ensure you have met the following requirements:
 5. Start the development server:
 
    ```bash
-   npm run dev
+   pnpm dev
    ```
 
 6. Open your web browser and navigate to `http://localhost:3000` to access the application.
