@@ -6,6 +6,7 @@ import { ConvexClientProvider } from "@/components/providers/convex-provider";
 import { Toaster } from "sonner";
 import { ModalProvider } from "@/components/providers/modal-provider";
 import { EdgeStoreProvider } from "@/lib/edgestore";
+import TopLoader from "@/components/top-loader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               enableSystem
               disableTransitionOnChange
               storageKey="crux-theme">
+              <TopLoader />
               <Toaster position="bottom-center" />
               <ModalProvider />
               {children}
